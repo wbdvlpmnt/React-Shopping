@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Nav from "./components/Nav";
 
 function App() {
   return (
-    <>
-      <h1 className="p-2 m-2 text-xl text-red-300">Welcome to the store</h1>
-    </>
+    <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+      <Nav/>
+    </div>
   );
 }
 
