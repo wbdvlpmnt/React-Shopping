@@ -1,4 +1,5 @@
 import { Product } from "../app/types/types";
+import { HashLink } from "react-router-hash-link";
 
 export default function Carousel(props: { products: Product[] }) {
   const products = props.products;
@@ -35,12 +36,11 @@ export default function Carousel(props: { products: Product[] }) {
                     <p className="text-black text-2xl my-4">
                       {products[0].title}
                     </p>
-                    <a
-                      className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black"
-                      href="#"
-                    >
-                      view product
-                    </a>
+                    <HashLink smooth to="/#shop">
+                      <p className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
+                        view product
+                      </p>
+                    </HashLink>
                   </div>
                 </div>
               </div>
@@ -83,12 +83,11 @@ export default function Carousel(props: { products: Product[] }) {
                     <p className="text-black text-2xl my-4">
                       {products[1].title}
                     </p>
-                    <a
-                      className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black"
-                      href="#"
-                    >
-                      view product
-                    </a>
+                    <HashLink smooth to="/#shop">
+                      <p className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
+                        view product
+                      </p>
+                    </HashLink>
                   </div>
                 </div>
               </div>
@@ -131,12 +130,11 @@ export default function Carousel(props: { products: Product[] }) {
                     <p className="text-black text-2xl my-4">
                       {products[2].title}
                     </p>
-                    <a
-                      className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black"
-                      href="#"
-                    >
-                      view product
-                    </a>
+                    <HashLink smooth to="/#shop">
+                      <p className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
+                        view product
+                      </p>
+                    </HashLink>
                   </div>
                 </div>
               </div>
