@@ -21,7 +21,7 @@ export default function Landing() {
       <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
       {isOpen ? <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} /> : null}
 
-      <Carousel products={productsData} />
+      <Carousel products={productsData} isOpen={isOpen} />
       <Products products={productsData} />
       <About />
       <Footer />

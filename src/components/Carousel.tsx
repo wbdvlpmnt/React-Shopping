@@ -1,7 +1,10 @@
 import { Product } from "../app/types/types";
 import { HashLink } from "react-router-hash-link";
 
-export default function Carousel(props: { products: Product[] }) {
+export default function Carousel(props: {
+  products: Product[];
+  isOpen: boolean;
+}) {
   const products = props.products;
   return (
     <>
@@ -139,46 +142,53 @@ export default function Carousel(props: { products: Product[] }) {
                 </div>
               </div>
             </div>
-            <label
-              htmlFor="carousel-2"
-              className="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto"
-            >
-              ‹
-            </label>
-            <label
-              htmlFor="carousel-1"
-              className="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto"
-            >
-              ›
-            </label>
+            {!props.isOpen ? (
+              <label
+                htmlFor="carousel-2"
+                className="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto"
+              >
+                ‹
+              </label>
+            ) : null}
+
+            {!props.isOpen ? (
+              <label
+                htmlFor="carousel-1"
+                className="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto"
+              >
+                ›
+              </label>
+            ) : null}
 
             {/* <!-- Add additional indicators for each slide--> */}
-            <ol className="carousel-indicators">
-              <li className="inline-block mr-3">
-                <label
-                  htmlFor="carousel-1"
-                  className="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900"
-                >
-                  •
-                </label>
-              </li>
-              <li className="inline-block mr-3">
-                <label
-                  htmlFor="carousel-2"
-                  className="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900"
-                >
-                  •
-                </label>
-              </li>
-              <li className="inline-block mr-3">
-                <label
-                  htmlFor="carousel-3"
-                  className="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900"
-                >
-                  •
-                </label>
-              </li>
-            </ol>
+            {!props.isOpen ? (
+              <ol className="carousel-indicators">
+                <li className="inline-block mr-3">
+                  <label
+                    htmlFor="carousel-1"
+                    className="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900"
+                  >
+                    •
+                  </label>
+                </li>
+                <li className="inline-block mr-3">
+                  <label
+                    htmlFor="carousel-2"
+                    className="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900"
+                  >
+                    •
+                  </label>
+                </li>
+                <li className="inline-block mr-3">
+                  <label
+                    htmlFor="carousel-3"
+                    className="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900"
+                  >
+                    •
+                  </label>
+                </li>
+              </ol>
+            ) : null}
           </div>
         </div>
       )}

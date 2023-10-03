@@ -179,6 +179,7 @@ export default function Sidebar(props: {
                       <button
                         type="button"
                         className="font-medium text-indigo-600 hover:text-indigo-500"
+                        onClick={() => setIsOpen(!isOpen)}
                       >
                         Continue Shopping
                         <span aria-hidden="true"> &rarr;</span>
