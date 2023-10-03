@@ -67,7 +67,7 @@ export default function Nav(props: {
         </div>
 
         <div className="order-2 md:order-3 flex items-center" id="nav-content">
-          <a
+          <button
             className="pl-3 inline-block no-underline hover:text-black"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -82,7 +82,7 @@ export default function Nav(props: {
               <circle cx="10.5" cy="18.5" r="1.5" />
               <circle cx="17.5" cy="18.5" r="1.5" />
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </nav>
