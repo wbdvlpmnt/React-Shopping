@@ -6,9 +6,11 @@ import Carousel from "./Carousel";
 import Footer from "./Footer";
 import Products from "./Products";
 import Nav from "./Nav";
+import Sidebar from "./Sidebar";
 
 export default function Landing() {
   const [productsData, setProductsData] = useState<Product[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     setProductsData(response.data);
@@ -16,7 +18,9 @@ export default function Landing() {
   }, []);
   return (
     <>
-      <Nav />
+      <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
+      {isOpen ? <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} /> : null}
+
       <Carousel products={productsData} />
       <Products products={productsData} />
       <About />

@@ -1,7 +1,13 @@
+import { Dispatch, SetStateAction } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-export default function Nav() {
+export default function Nav(props: {
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+}) {
+  const isOpen = props.isOpen;
+  const setIsOpen = props.setIsOpen;
   return (
     <nav id="header" className="w-full z-30 top-0 py-1">
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
@@ -63,7 +69,7 @@ export default function Nav() {
         <div className="order-2 md:order-3 flex items-center" id="nav-content">
           <a
             className="pl-3 inline-block no-underline hover:text-black"
-            href="#"
+            onClick={() => setIsOpen(!isOpen)}
           >
             <svg
               className="fill-current hover:text-black"
