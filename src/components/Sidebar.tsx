@@ -1,5 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Fn } from "tinybench";
+import { Product } from "../app/types/types";
 
 export default function Sidebar(props: {
   isOpen: boolean;
@@ -7,6 +9,13 @@ export default function Sidebar(props: {
 }) {
   const isOpen = props.isOpen;
   const setIsOpen = props.setIsOpen;
+  const dispatch = useDispatch();
+
+  const items = useSelector(
+    (state: any) => state.shoppingCart.items
+  ) as Product[];
+
+  console.log("items: ", items);
 
   return (
     <div
