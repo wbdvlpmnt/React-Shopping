@@ -23,6 +23,7 @@ export default function Carousel(props: {
               aria-hidden="true"
               hidden={true}
               checked={true}
+              readOnly
             />
             <div
               className="carousel-item absolute opacity-0"
@@ -69,7 +70,7 @@ export default function Carousel(props: {
               name="carousel"
               aria-hidden="true"
               hidden={true}
-              checked={true}
+              readOnly
             />
             <div
               className="carousel-item absolute opacity-0"
@@ -116,7 +117,7 @@ export default function Carousel(props: {
               name="carousel"
               aria-hidden="true"
               hidden={true}
-              checked={true}
+              readOnly
             />
             <div
               className="carousel-item absolute opacity-0"
