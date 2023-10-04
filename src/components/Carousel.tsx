@@ -70,6 +70,7 @@ export default function Carousel(props: {
               name="carousel"
               aria-hidden="true"
               hidden={true}
+              checked={true}
               readOnly
             />
             <div
@@ -117,6 +118,7 @@ export default function Carousel(props: {
               name="carousel"
               aria-hidden="true"
               hidden={true}
+              checked={true}
               readOnly
             />
             <div
