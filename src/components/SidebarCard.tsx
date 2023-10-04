@@ -1,9 +1,12 @@
+import { useDispatch } from "react-redux";
 import { Product } from "../app/types/types";
+import { remove } from "../features/shoppingCart/shoppingCartSlice";
 
 export default function SideBarCard(props: {
   uniqueIds: String[];
   items: Product[];
 }) {
+  const dispatch = useDispatch();
   const uniqueIds = props.uniqueIds;
   const items = props.items;
 
@@ -37,6 +40,9 @@ export default function SideBarCard(props: {
               <button
                 type="button"
                 className="font-medium text-indigo-600 hover:text-indigo-500"
+                onClick={() => {
+                  dispatch(remove(items.indexOf(result[0])));
+                }}
               >
                 Remove
               </button>

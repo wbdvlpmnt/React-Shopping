@@ -113,7 +113,9 @@ export default function Sidebar(props: {
                         role="list"
                         className="-my-6 divide-y divide-gray-200"
                       >
-                        <SideBarCard uniqueIds={uniqueIds} items={items} />
+                        {items.length > 0 ? (
+                          <SideBarCard uniqueIds={uniqueIds} items={items} />
+                        ) : null}
                       </ul>
                     </div>
                   </div>
