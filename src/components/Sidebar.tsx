@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Fn } from "tinybench";
 import { Product } from "../app/types/types";
@@ -11,11 +11,32 @@ export default function Sidebar(props: {
   const setIsOpen = props.setIsOpen;
   const dispatch = useDispatch();
 
+  const [subTotal, setSubTotal] = useState(0);
+  const [uniqueIds, setUniqueIds] = useState<String[]>([]);
+
   const items = useSelector(
     (state: any) => state.shoppingCart.items
   ) as Product[];
 
-  console.log("items: ", items);
+  function calculatedTotal(items: Product[]) {
+    // calculate total before transformation
+    let total = 0;
+    items.map((item: Product) => {
+      total = item.price + total;
+    });
+    setSubTotal(total);
+  }
+
+  function findUniqueIds(items: Product[]) {
+    const unique = [...new Set(items.map((item: Product) => item.id))]; // [ 'A', 'B']
+    setUniqueIds(unique);
+  }
+
+  useEffect(() => {
+    console.log("items: ", items);
+    calculatedTotal(items);
+    findUniqueIds(items);
+  }, [items]);
 
   return (
     <div
@@ -169,7 +190,7 @@ export default function Sidebar(props: {
                 <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                   <div className="flex justify-between text-base font-medium text-gray-900">
                     <p>Subtotal</p>
-                    <p>$262.00</p>
+                    <p>{subTotal}</p>
                   </div>
                   <p className="mt-0.5 text-sm text-gray-500">
                     Shipping and taxes calculated at checkout.
