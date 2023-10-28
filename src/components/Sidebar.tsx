@@ -28,15 +28,11 @@ export default function Sidebar(props: {
     setSubTotal(total);
   }
 
-  function findUniqueIds(items: Product[]) {
-    const unique = [...new Set(items.map((item: Product) => item.id))]; // [ 'A', 'B']
-    setUniqueIds(unique);
-  }
+  const unique = [...new Set(items.map((item: Product) => item.id))]; // [ 'A', 'B']
 
   useEffect(() => {
     console.log("items: ", items);
     calculatedTotal(items);
-    findUniqueIds(items);
   }, [items]);
 
   return (
@@ -114,7 +110,7 @@ export default function Sidebar(props: {
                         className="-my-6 divide-y divide-gray-200"
                       >
                         {items.length > 0 ? (
-                          <SideBarCard uniqueIds={uniqueIds} items={items} />
+                          <SideBarCard uniqueIds={unique} items={items} />
                         ) : null}
                       </ul>
                     </div>
