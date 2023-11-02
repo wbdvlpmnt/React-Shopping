@@ -41,9 +41,9 @@ export default function Carousel(props: {
                       {products[0].title}
                     </p>
                     <HashLink smooth to="/#shop">
-                      <p className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
+                      <button className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
                         view product
-                      </p>
+                      </button>
                     </HashLink>
                   </div>
                 </div>
@@ -89,9 +89,9 @@ export default function Carousel(props: {
                       {products[1].title}
                     </p>
                     <HashLink smooth to="/#shop">
-                      <p className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
+                      <button className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
                         view product
-                      </p>
+                      </button>
                     </HashLink>
                   </div>
                 </div>
@@ -137,9 +137,9 @@ export default function Carousel(props: {
                       {products[2].title}
                     </p>
                     <HashLink smooth to="/#shop">
-                      <p className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
+                      <button className="w-full text-xl no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
                         view product
-                      </p>
+                      </button>
                     </HashLink>
                   </div>
                 </div>

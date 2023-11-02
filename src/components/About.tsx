@@ -9,35 +9,7 @@ export default function About() {
           >
             About
           </a>
-
-          <p className="mt-8 mb-8">
-            This template is inspired by the stunning nordic minimalist design -
-            in particular:
-            <br />
-            <a
-              className="text-gray-800 underline hover:text-gray-900"
-              href="http://savoy.nordicmade.com/"
-              target="_blank"
-            >
-              Savoy Theme
-            </a>{" "}
-            created by{" "}
-            <a
-              className="text-gray-800 underline hover:text-gray-900"
-              href="https://nordicmade.com/"
-            >
-              https://nordicmade.com/
-            </a>{" "}
-            and{" "}
-            <a
-              className="text-gray-800 underline hover:text-gray-900"
-              href="https://www.metricdesign.no/"
-              target="_blank"
-            >
-              https://www.metricdesign.no/
-            </a>
-          </p>
-
+    
           <p className="mb-8">
             Lorem ipsum dolor sit amet, consectetur <a href="#">random link</a>{" "}
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et

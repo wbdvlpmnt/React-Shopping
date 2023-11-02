@@ -8,12 +8,12 @@ export default function ProductCard(props: { product: Product }) {
   return (
     <>
       <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-        <a href="#">
+        <button>
           <img className="hover:grow hover:shadow-lg" src={product.url} />
           <div className="pt-3 flex items-center justify-between">
             <p className="">{product.title}</p>
             <svg
-              className="fill-current hover:text-black"
+              className="fill-current hover:text-black  "
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -28,7 +28,7 @@ export default function ProductCard(props: { product: Product }) {
             </svg>
           </div>
           <p className="pt-1 text-gray-900">{product.price}</p>
-        </a>
+        </button>
       </div>
     </>
   );
