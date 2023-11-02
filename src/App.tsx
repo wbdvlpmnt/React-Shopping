@@ -1,12 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Nav from "./components/Nav";
+import Landing from "./components/Landing";
 
 function App() {
   return (
-    <>
-      <h1 className="p-2 m-2 text-xl text-red-300">Welcome to the store</h1>
-    </>
+    <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Landing />}></Route>
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
