@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Fn } from "tinybench";
+import { useSelector } from "react-redux";
 import { Product } from "../app/types/types";
 import SideBarCard from "./SidebarCard";
 
@@ -10,10 +9,8 @@ export default function Sidebar(props: {
 }) {
   const isOpen = props.isOpen;
   const setIsOpen = props.setIsOpen;
-  const dispatch = useDispatch();
 
   const [subTotal, setSubTotal] = useState(0);
-  const [uniqueIds, setUniqueIds] = useState<String[]>([]);
 
   const items = useSelector(
     (state: any) => state.shoppingCart.items
