@@ -13,7 +13,7 @@ export default function ProductCard(props: { product: Product }) {
           <div className="pt-3 flex items-center justify-between">
             <p className="">{product.title}</p>
             <svg
-              className="fill-current hover:text-black  "
+              className="fill-current hover:text-black active:scale-90"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
