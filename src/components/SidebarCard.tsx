@@ -27,7 +27,7 @@ export default function SideBarCard(props: {
           <div>
             <div className="flex justify-between text-base font-medium text-gray-900">
               <h3>
-                <a href="#">{result[0].title}</a>
+                <p>{result[0].title}</p>
               </h3>
               <p className="ml-4">{result[0].price}</p>
             </div>
