@@ -32,15 +32,15 @@ export default function Nav(props: {
           <nav>
             <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
               <li>
-                <HashLink smooth to="/#shop">
-                  <p className="inline-block no-underline hover:text-black hover:underline py-2 px-4">
+                <HashLink smooth to="/React-Shopping/#shop">
+                  <p className="inline-block no-underline hover:text-black hover:underline py-2 px-4 active:scale-90">
                     Shop
                   </p>
                 </HashLink>
               </li>
               <li>
-                <HashLink smooth to="/#about">
-                  <p className="inline-block no-underline hover:text-black hover:underline py-2 px-4">
+                <HashLink smooth to="/React-Shopping/#about">
+                  <p className="inline-block no-underline hover:text-black hover:underline py-2 px-4 active:scale-90">
                     About
                   </p>
                 </HashLink>
@@ -50,10 +50,10 @@ export default function Nav(props: {
         </div>
 
         <div className="order-1 md:order-2">
-          <Link to="/">
+          <Link to="/React-Shopping">
             <p className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl">
               <svg
-                className="fill-current text-gray-800 mr-2"
+                className="fill-current text-gray-800 mr-2 active:scale-90"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -72,7 +72,7 @@ export default function Nav(props: {
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg
-              className="fill-current hover:text-black"
+              className="fill-current hover:text-black active:scale-90"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
