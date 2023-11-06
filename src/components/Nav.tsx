@@ -32,14 +32,14 @@ export default function Nav(props: {
           <nav>
             <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
               <li>
-                <HashLink smooth to="/#shop">
+                <HashLink smooth to="/React-Shopping/#shop">
                   <p className="inline-block no-underline hover:text-black hover:underline py-2 px-4">
                     Shop
                   </p>
                 </HashLink>
               </li>
               <li>
-                <HashLink smooth to="/#about">
+                <HashLink smooth to="/React-Shopping/#about">
                   <p className="inline-block no-underline hover:text-black hover:underline py-2 px-4">
                     About
                   </p>
