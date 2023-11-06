@@ -40,8 +40,12 @@ export default function Carousel(props: {
                     <p className="text-black text-2xl my-4">
                       {products[0].title}
                     </p>
-                    <HashLink smooth to="/#shop">
-                      <button className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
+                    <HashLink
+                      className="w-40"
+                      smooth
+                      to="/React-Shopping/#shop"
+                    >
+                      <button className="border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
                         view product
                       </button>
                     </HashLink>
@@ -88,8 +92,12 @@ export default function Carousel(props: {
                     <p className="text-black text-2xl my-4">
                       {products[1].title}
                     </p>
-                    <HashLink smooth to="/#shop">
-                      <button className="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
+                    <HashLink
+                      className="w-40"
+                      smooth
+                      to="/React-Shopping/#shop"
+                    >
+                      <button className="border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
                         view product
                       </button>
                     </HashLink>
@@ -136,8 +144,12 @@ export default function Carousel(props: {
                     <p className="text-black text-2xl my-4">
                       {products[2].title}
                     </p>
-                    <HashLink smooth to="/#shop">
-                      <button className="w-full text-xl no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
+                    <HashLink
+                      className="w-40"
+                      smooth
+                      to="/React-Shopping/#shop"
+                    >
+                      <button className="border-b border-gray-600 leading-relaxed hover:text-black hover:border-black">
                         view product
                       </button>
                     </HashLink>
