@@ -27,8 +27,8 @@ export default function ProductCard(props: { product: Product }) {
               <circle cx="17.5" cy="18.5" r="1.5" />
             </svg>
           </div>
-          <p className="pt-1 text-gray-900">{product.price}</p>
         </button>
+        <p className="pt-1 text-gray-900">{product.price}</p>
       </div>
     </>
   );
